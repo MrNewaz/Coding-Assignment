@@ -28,4 +28,5 @@ class Child(models.Model):
         return self.first_name + ' ' + self.last_name
 
     class Meta:
+        verbose_name_plural = "Children"
         ordering = ['first_name']
