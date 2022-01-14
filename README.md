@@ -69,7 +69,7 @@
 
 ## Step 3(Repository):
 * Git Clone 'https://github.com/MrNewaz/Coding-Assignment.git'
-* Or Download code from the repository.
+* Or download code from the repository.
 
 <br/>
 
