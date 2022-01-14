@@ -10,7 +10,7 @@
 
 ## Step 2(Install):
 * Run 'python-3.10.1-amd64.exe' as administrator.
-<!-- Don't forget to check add to path(windows) -->
+* Don't forget to check add to path(windows)
 
 <br/>
 
