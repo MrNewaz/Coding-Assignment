@@ -1,7 +1,14 @@
 from django.db import models
 
 
+"""
+ - CharField for adding a text field to a model.
+ - IntegerField for adding an integer field to a model.
+"""
+
 # Parent Model
+
+
 class Parent(models.Model):
     first_name = models.CharField(max_length=50, null=True, blank=True)
     last_name = models.CharField(max_length=50, null=True, blank=True)

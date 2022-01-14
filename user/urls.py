@@ -1,8 +1,6 @@
 from rest_framework.routers import DefaultRouter
 from .views import *
 
-router = DefaultRouter()
-
 """
 All routes for Parent User:
 
@@ -15,12 +13,8 @@ Route : 'parent/<pk>/'
  - Put(update)
  - Patch(partial_update)
  - Delete(destroy)
-"""
-router.register('parent', ParentViewSet)
 
-
-"""
-All routes for Child User:
+ All routes for Child User:
 
 Route : 'child/'
  - Get(list) 
@@ -32,6 +26,12 @@ Route : 'child/<pk>/'
  - Patch(partial_update)
  - Delete(destroy)
 """
+
+router = DefaultRouter()
+
+
+router.register('parent', ParentViewSet)
+
 router.register('child', ChildViewSet)
 
 urlpatterns = router.urls

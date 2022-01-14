@@ -7,8 +7,6 @@ from ..models import *
 
 # Api Testing for Child user
 class ChildAPITests(APITestCase):
-
-    # Setting up Parent User
     def setUp(self):
         # Setting up Parent User
         self.parent = Parent.objects.create(
@@ -48,7 +46,7 @@ class ChildAPITests(APITestCase):
         response = client.post("/user/child/", data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    # Update a Child User
+    # Update a Child User by id(pk)
     def test_child_user_update(self):
 
         data = {
@@ -63,7 +61,7 @@ class ChildAPITests(APITestCase):
         self.assertEqual(response.status_code,
                          status.HTTP_200_OK)
 
-    # Delete a Child User
+    # Delete a Child User by id(pk)
     def test_child_user_delete(self):
 
         client = APIClient()

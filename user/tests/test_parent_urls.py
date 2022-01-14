@@ -40,7 +40,7 @@ class ParentAPITests(APITestCase):
         response = client.post("/user/parent/", data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    # Upadate a Parent User
+    # Upadate a Parent User by id(pk)
     def test_parent_user_update(self):
 
         data = {
@@ -58,7 +58,7 @@ class ParentAPITests(APITestCase):
         self.assertEqual(response.status_code,
                          status.HTTP_200_OK)
 
-    # Delete a Parent User
+    # Delete a Parent User by id(pk)
     def test_parent_user_delete(self):
 
         client = APIClient()
