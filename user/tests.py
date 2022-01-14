@@ -1,10 +1,11 @@
-from django.test import TestCase
+# from django.test import TestCase
+# from django.urls import reverse
 from rest_framework.test import APITestCase, APIClient
-from django.urls import reverse
 from rest_framework import status
 from .models import *
 
 
+# Api testing for Parent user
 class ParentAPITests(APITestCase):
 
     # Setting up parent user
@@ -19,12 +20,12 @@ class ParentAPITests(APITestCase):
         )
 
     # Get List of Parent Users
-    def test_get_parent(self):
+    def test_get_parents_list(self):
         client = APIClient()
         response = client.get("/user/parent/")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    # Create Parent Users
+    # Create a Parent User
     def test_parent_user_create(self):
         data = {
             "first_name": "Saif",
@@ -39,7 +40,7 @@ class ParentAPITests(APITestCase):
         response = client.post("/user/parent/", data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    # Upadate a Parent Users
+    # Upadate a Parent User
     def test_parent_user_update(self):
 
         data = {
@@ -53,11 +54,11 @@ class ParentAPITests(APITestCase):
 
         client = APIClient()
         self.parent.refresh_from_db()
-        response = client.put("/user/parent/1/", data)
+        response = client.put("/user/parent/"+str(self.parent.id)+"/", data)
         self.assertEqual(response.status_code,
                          status.HTTP_200_OK)
 
-    # Delete a Parent Users
+    # Delete a Parent User
     def test_parent_user_delete(self):
 
         client = APIClient()
@@ -67,20 +68,22 @@ class ParentAPITests(APITestCase):
                          status.HTTP_204_NO_CONTENT)
 
 
-# Api testing for POST method of child user
+# Api Testing for Child user
 class ChildAPITests(APITestCase):
 
-    # Setting up parent user
+    # Setting up Parent User
     def setUp(self):
+        # Setting up Parent User
         self.parent = Parent.objects.create(
-            first_name="Saif",
-            last_name="Newaz",
+            first_name="Hmmm",
+            last_name="Ohhh",
             street="Bou Bari Goli",
             city="Dhaka",
             state="Dhaka",
             zip_code=1206
         )
 
+        # Setting up Child User
         self.child = Child.objects.create(
             parent=self.parent,
             first_name="Saif",
@@ -89,18 +92,18 @@ class ChildAPITests(APITestCase):
 
     # Get List of Child Users
 
-    def test_child_list(self):
+    def test_get_children_list(self):
 
         client = APIClient()
         response = client.get("/user/child/")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    # Create a Child Users
+    # Create a Child User
 
     def test_child_user_create(self):
         data = {
             "parent": self.parent.id,
-            "first_name": "Saisha",
+            "first_name": "Saisha2",
             "last_name": "Newaz",
         }
 
@@ -108,7 +111,7 @@ class ChildAPITests(APITestCase):
         response = client.post("/user/child/", data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    # Update a Child Users
+    # Update a Child User
     def test_child_user_update(self):
 
         data = {
@@ -123,7 +126,7 @@ class ChildAPITests(APITestCase):
         self.assertEqual(response.status_code,
                          status.HTTP_200_OK)
 
-    # Delete a Child Users
+    # Delete a Child User
     def test_child_user_delete(self):
 
         client = APIClient()
