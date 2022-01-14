@@ -5,7 +5,10 @@ from ..models import *
 class ParentTestCase(TestCase):
     # Setting up Parent User
     def setUp(self):
-        # Setting up Parent User
+        """
+        - Setting up Parent User
+        - Inserting data
+        """
         self.parent = Parent.objects.create(
             first_name="Saif",
             last_name="Newaz",
