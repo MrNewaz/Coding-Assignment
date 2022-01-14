@@ -3,15 +3,35 @@ from .views import *
 
 router = DefaultRouter()
 
-# Parent Route
-# Get & Post /parent
-# Put & Delete /parent/<pk>
+"""
+All routes for Parent User:
+
+Route : 'parent/'
+ - Get(list) 
+ - Post(create) 
+
+Route : 'parent/<pk>/'
+ - Get(retrieve)
+ - Put(update)
+ - Patch(partial_update)
+ - Delete(destroy)
+"""
 router.register('parent', ParentViewSet)
 
 
-# Parent Route
-# Get & Post /child
-# Put & Delete /child/<pk>
+"""
+All routes for Child User:
+
+Route : 'child/'
+ - Get(list) 
+ - Post(create) 
+ 
+Route : 'child/<pk>/'
+ - Get(retrieve)
+ - Put(update)
+ - Patch(partial_update)
+ - Delete(destroy)
+"""
 router.register('child', ChildViewSet)
 
 urlpatterns = router.urls

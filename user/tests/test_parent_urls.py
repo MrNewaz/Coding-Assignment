@@ -13,7 +13,7 @@ class ParentAPITests(APITestCase):
         self.parent = Parent.objects.create(
             first_name="Saif",
             last_name="Newaz",
-            street="Bou Bari Goli",
+            street="Bou Baazar",
             city="Dhaka",
             state="Dhaka",
             zip_code=1206
@@ -30,7 +30,7 @@ class ParentAPITests(APITestCase):
         data = {
             "first_name": "Saif",
             "last_name": "Newaz",
-            "street": "Bou Bari Goli",
+            "street": "Bou Baazar",
             "city": "Dhaka",
             "state": "Dhaka",
             "zip_code": 1206

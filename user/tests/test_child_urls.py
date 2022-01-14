@@ -12,9 +12,9 @@ class ChildAPITests(APITestCase):
     def setUp(self):
         # Setting up Parent User
         self.parent = Parent.objects.create(
-            first_name="Hmmm",
-            last_name="Ohhh",
-            street="Bou Bari Goli",
+            first_name="Saif",
+            last_name="Newaz",
+            street="Bou Baazar",
             city="Dhaka",
             state="Dhaka",
             zip_code=1206
@@ -23,7 +23,7 @@ class ChildAPITests(APITestCase):
         # Setting up Child User
         self.child = Child.objects.create(
             parent=self.parent,
-            first_name="Saif",
+            first_name="Saisha",
             last_name="Newaz",
         )
 

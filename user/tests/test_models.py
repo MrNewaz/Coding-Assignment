@@ -22,7 +22,7 @@ class ParentTestCase(TestCase):
     - Testing if the data are returing correctly
     """
 
-    def test_all_values_returned_correctly(self):
+    def test_values_returned_correctly(self):
         self.assertEqual(self.parent.first_name, 'Saif')
         self.assertEqual(self.parent.last_name, 'Newaz')
         self.assertEqual(self.parent.street, 'Bou Baazar')
@@ -33,12 +33,12 @@ class ParentTestCase(TestCase):
 
 class ChildTestCase(TestCase):
     """
+    - Setting up Parent User
     - Setting up Child User
     - Inserting data
     """
 
     def setUp(self):
-        # Setting up Parent User
         self.parent = Parent.objects.create(
             first_name="Saif",
             last_name="Newaz",
@@ -48,7 +48,6 @@ class ChildTestCase(TestCase):
             zip_code=1206
         )
 
-        # Setting up Child User
         self.child = Child.objects.create(
             parent=self.parent,
             first_name="Saisha",
@@ -59,7 +58,7 @@ class ChildTestCase(TestCase):
     - Testing if the data are returing correctly
     """
 
-    def test_all_values_returned_correctly(self):
+    def test_values_returned_correctly(self):
         self.assertEqual(self.child.first_name, 'Saisha')
         self.assertEqual(self.child.last_name, 'Newaz')
         self.assertEqual(self.child.parent.first_name, 'Saif')
