@@ -3,12 +3,12 @@ from ..models import *
 
 
 class ParentTestCase(TestCase):
-    # Setting up Parent User
+    """
+    - Setting up Parent User
+    - Inserting data
+    """
+
     def setUp(self):
-        """
-        - Setting up Parent User
-        - Inserting data
-        """
         self.parent = Parent.objects.create(
             first_name="Saif",
             last_name="Newaz",
@@ -17,6 +17,10 @@ class ParentTestCase(TestCase):
             state="Dhaka",
             zip_code=1206
         )
+
+    """
+    - Testing if the data are returing correctly
+    """
 
     def test_all_values_returned_correctly(self):
         self.assertEqual(self.parent.first_name, 'Saif')
@@ -28,7 +32,11 @@ class ParentTestCase(TestCase):
 
 
 class ChildTestCase(TestCase):
-    # Setting up Parent User
+    """
+    - Setting up Child User
+    - Inserting data
+    """
+
     def setUp(self):
         # Setting up Parent User
         self.parent = Parent.objects.create(
@@ -46,6 +54,10 @@ class ChildTestCase(TestCase):
             first_name="Saisha",
             last_name="Newaz",
         )
+
+    """
+    - Testing if the data are returing correctly
+    """
 
     def test_all_values_returned_correctly(self):
         self.assertEqual(self.child.first_name, 'Saisha')
