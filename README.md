@@ -20,6 +20,7 @@
 ## Repository Structure:
 
 ```
+.
 |-- Pipfile
 |-- Pipfile.lock
 |-- README.md
@@ -28,9 +29,12 @@
 |   |-- asgi.py
 |   |-- settings.py
 |   |-- urls.py
+|   |-- views.py
 |   `-- wsgi.py
 |-- db.sqlite3
 |-- manage.py
+|-- templates
+|   `-- index.html
 `-- user
     |-- __init__.py
     |-- admin.py
@@ -39,7 +43,11 @@
     |   |-- __init__.py
     |-- models.py
     |-- serializers.py
-    |-- tests.py
+    |-- tests
+    |   |-- __init__.py
+    |   |-- test_child_urls.py
+    |   |-- test_models.py
+    |   `-- test_parent_urls.py
     |-- urls.py
     `-- views.py
 ```
