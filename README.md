@@ -51,7 +51,7 @@
 <br/>
 
 ## Step 7(Adding Superuser):
-* Run 'python manage.py createsuperuser' in the terminal and create a superuser to access admin pannel by adding username, email(optional) and password.
+* Run 'python manage.py createsuperuser' in the terminal and create a superuser to access admin panel by adding username, email(optional) and password.
 
 <br/>
 
