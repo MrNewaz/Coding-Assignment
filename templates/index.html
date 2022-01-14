@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+      ::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        width: calc(2px * 2);
+        border: 2px solid rgba(26, 26, 26, 0);
+      }
+
+      ::-webkit-scrollbar-track-piece {
+        background: transparent;
+        width: calc(2px / 2);
+        border: 2px solid rgba(26, 26, 26, 0);
+      }
+
+      body {
+        scrollbar-face-color: rgba(255, 255, 255, 0.15);
+        scrollbar-track-color: transparent;
+      }
+
+      div {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        font-size: 5vmin;
+      }
+
+      body {
+        display: grid;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: 'Quicksand';
+        color: #fff;
+        background: #333;
+        background-image: radial-gradient(
+            ellipse at bottom left,
+            #00a3cb 40%,
+            rgba(0, 163, 203, 0) 40%
+          ),
+          radial-gradient(
+            ellipse at top right,
+            #00a3cb 30%,
+            rgba(0, 163, 203, 0) 30%
+          ),
+          linear-gradient(
+            to right,
+            #625793 0%,
+            #625793 33%,
+            #d55d64 33%,
+            #d55d64 66%,
+            #e49129 66%
+          );
+        background-size: 50% 100%;
+      }
+
+      body .card {
+        margin: auto;
+        padding: 2em;
+        border-radius: 1em;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        transform: perspective(500px);
+        transform-style: preserve-3d;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      a:hover {
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="welcome">Welcome & Navigate to</div>
+      <div class="year">
+        <ul>
+          <li>
+            <span>
+              <a href="/admin">Admin</a>
+            </span>
+          </li>
+          <li>
+            <span>
+              <a href="/user">Routes</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
