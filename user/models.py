@@ -10,8 +10,8 @@ class Parent(models.Model):
     state = models.CharField(max_length=50)
     zip_code = models.IntegerField()
 
-    # def __str__(self):
-    #     return self.first_name + ' ' + self.last_name
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
 
     class Meta:
         ordering = ['first_name']
