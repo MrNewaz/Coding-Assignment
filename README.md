@@ -15,32 +15,32 @@
 <br/>
 
 ## Step 3(Virtual Environment):
-* Open IDE(e.g. VSCode) and Run 'pipenv shell' in terminal to activate virtual environment.
+* Open IDE(e.g. VSCode) and Run 'pipenv shell' in the terminal to activate virtual environment.
 
 <br/>
 
 ## Step 4(Install Dependencies):
-* Run 'pipenv install' in terminal.
+* Run 'pipenv install' in the terminal.
 
 <br/>
 
 ## Step 5(Adding Superuser):
-* Run 'python manage.py createsuperuser' in terminal and add username and password.
+* Run 'python manage.py createsuperuser' in the terminal and create a superuser to access admin pannel by adding username, email(optional) and password.
 
 <br/>
 
 ## Step 6(Run App):
-* Run 'python manage.py runserver'.
+* Run 'python manage.py runserver' to start the server.
 
 <br/>
 
 ## Step 7(Test App):
-* Run 'python manage.py test'.
+* Run 'python manage.py test' for testing APIs.
 
 <br/>
 
 ## Done!:
-* Thank you. Have a nice day.
+* That's all. Thank you. Have a nice day.
 
 
 <br/>
