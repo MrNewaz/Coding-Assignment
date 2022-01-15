@@ -105,7 +105,7 @@ pipenv install
 
 
 ## Step 6(Migrations):
-* Run makemigrations,
+* Run,
 ```
 python manage.py makemigrations
 ```
