@@ -64,6 +64,11 @@
 ## Step 2(Install):
 * Run 'python-3.10.1-amd64.exe' as administrator.
 * Don't forget to check add to path(windows)
+* After Python is installed, run, 'python -m pip install --upgrade pip'
+* Then run,  
+```pip install pipenv
+```
+
 
 <br/>
 
