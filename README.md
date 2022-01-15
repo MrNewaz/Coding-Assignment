@@ -64,7 +64,10 @@
 ## Step 2(Install):
 * Run 'python-3.10.1-amd64.exe' as administrator.
 * Don't forget to check add to path(windows)
-* After Python is installed, run, 'python -m pip install --upgrade pip'
+* After Python is installed, run, 
+```
+python -m pip install --upgrade pip
+```
 * Then run,  
 ```
 pip install pipenv
@@ -74,13 +77,20 @@ pip install pipenv
 <br/>
 
 ## Step 3(Repository):
-* Git Clone 'https://github.com/MrNewaz/Coding-Assignment.git'
-* Or download code from the repository.
+* Clone the repository,
+```
+git clone https://github.com/MrNewaz/Coding-Assignment.git
+```
+* Or download code from the [repository](https://github.com/MrNewaz/Coding-Assignment.git).
 
 <br/>
 
 ## Step 4(Virtual Environment):
-* Open the folder in an IDE(e.g. VSCode) and Run 'pipenv shell' in the terminal to activate virtual environment.
+* Open the folder in an IDE(e.g. VSCode) and Run, 
+```
+pipenv shell
+``` 
+in the terminal to activate virtual environment.
 
 <br/>
 
