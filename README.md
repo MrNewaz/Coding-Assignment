@@ -66,7 +66,8 @@
 * Don't forget to check add to path(windows)
 * After Python is installed, run, 'python -m pip install --upgrade pip'
 * Then run,  
-```pip install pipenv
+```
+pip install pipenv
 ```
 
 
