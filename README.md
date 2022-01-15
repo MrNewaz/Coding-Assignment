@@ -86,39 +86,57 @@ git clone https://github.com/MrNewaz/Coding-Assignment.git
 <br/>
 
 ## Step 4(Virtual Environment):
-* Open the folder in an IDE(e.g. VSCode) and Run, 
+* Open the folder in an IDE(e.g. VSCode) and run this in the terminal to activate virtual environment,
 ```
 pipenv shell
 ``` 
-in the terminal to activate virtual environment.
+
 
 <br/>
 
 ## Step 5(Install Dependencies):
-* Run 'pipenv install' in the terminal to install all dependencies.
+* Run this in the terminal to install all dependencies,
+```
+pipenv install
+```
 
 <br/>
 
 
 
 ## Step 6(Migrations):
-* Run 'python manage.py makemigrations'.
-* Run 'python manage.py migrate'. 
+* Run makemigrations,
+```
+python manage.py makemigrations
+```
+* Then Run,
+```
+python manage.py migrate
+```
 
 <br/>
 
 ## Step 7(Adding Superuser):
-* Run 'python manage.py createsuperuser' in the terminal and create a superuser to access admin panel by adding username, email(optional) and password.
+* Run this in the terminal and create a superuser to access admin panel by adding username, email(optional) and password,
+```
+python manage.py createsuperuser
+```
 
 <br/>
 
 ## Step 8(Run App):
-* Run 'python manage.py runserver' to start the server.
+* Run this to start the app,
+```
+python manage.py runserver
+```
 
 <br/>
 
 ## Step 9(Test App):
-* Run 'python manage.py test' for testing APIs.
+* Run this for testing API routes and models.
+```
+python manage.py test
+```
 
 <br/>
 
