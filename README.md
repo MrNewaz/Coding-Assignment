@@ -105,19 +105,19 @@ pipenv install
 
 
 ## Step 6(Migrations):
-* Run,
+* Run this creating new migrations based on the changes in your models,
 ```
 python manage.py makemigrations
 ```
-* Then Run,
+* Then Run this to apply the migrations to the database,
 ```
 python manage.py migrate
 ```
 
 <br/>
 
-## Step 7(Adding Superuser):
-* Run this in the terminal and create a superuser to access admin panel by adding username, email(optional) and password,
+## Step 7(Superuser):
+* Run this in the terminal and create a superuser to access admin panel by adding username, email(optional) and password, You will need username and password to login to the admin panel,
 ```
 python manage.py createsuperuser
 ```
